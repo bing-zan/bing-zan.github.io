@@ -1,1 +1,1 @@
-# bingzan.github.io
+# bing-zan.github.io
