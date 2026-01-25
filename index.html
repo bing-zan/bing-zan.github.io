@@ -2,76 +2,470 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bing Zan</title>
+  <meta name="description" content="Academic personal page of Bing Zan" />
 
-  <!-- Simple styling -->
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
+    :root{
+      --text:#222;
+      --muted:#666;
+      --border:#e9e9e9;
+      --link:#1a73e8;
+      --bg:#fff;
     }
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 0.2em;
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
     }
-    h2 {
-      margin-top: 2em;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 0.3em;
+    .wrap{
+      max-width: 980px;
+      margin: 56px auto;
+      padding: 0 18px;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+
+    /* Header */
+    header h1{
+      margin:0 0 6px 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: .2px;
     }
-    a:hover {
-      text-decoration: underline;
+    header .subtitle{
+      color:var(--muted);
+      margin:0 0 18px 0;
+      font-size: 1.02rem;
     }
-    .subtitle {
-      color: #666;
-      margin-bottom: 1.5em;
+
+    /* Nav */
+    nav{
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      padding: 10px 0;
+      margin: 18px 0 22px 0;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    nav a, nav button{
+      color: var(--text);
+      text-decoration:none;
+      font-size: 0.98rem;
+      padding: 6px 8px;
+      border-radius: 8px;
+    }
+    nav a:hover, nav button:hover{
+      background:#f6f6f6;
+    }
+
+    .spacer{ flex:1; }
+
+    /* Dropdown */
+    .dd{ position:relative; }
+    .dd > button{
+      border:0;
+      background:transparent;
+      cursor:pointer;
+      font: inherit;
+    }
+    .menu{
+      display:none;
+      position:absolute;
+      top: 38px;
+      left:0;
+      min-width: 220px;
+      background:white;
+      border:1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.08);
+      z-index: 10;
+    }
+    .menu a{
+      display:block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      white-space:nowrap;
+    }
+    .menu a:hover{ background:#f6f6f6; }
+    .dd.open .menu{ display:block; }
+
+    /* Language toggle */
+    .lang-toggle{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .pill{
+      border:1px solid var(--border);
+      background:white;
+      border-radius: 999px;
+      overflow:hidden;
+      display:inline-flex;
+    }
+    .pill button{
+      border:0;
+      background:transparent;
+      padding:6px 10px;
+      cursor:pointer;
+      font: inherit;
+      color: var(--muted);
+    }
+    .pill button.active{
+      background:#f4f7ff;
+      color: var(--text);
+    }
+
+    /* Content */
+    h2{
+      margin: 28px 0 10px;
+      font-size: 1.35rem;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p{ margin: 10px 0; }
+    a{ color: var(--link); }
+    a:hover{ text-decoration: underline; }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      align-items:start;
+      margin-top: 12px;
+    }
+    .photo{
+      width: 140px;
+      height: 140px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background:#fafafa;
+    }
+    .muted{ color: var(--muted); }
+    .card{
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background:#fff;
+    }
+    .pub{
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .pub:last-child{ border-bottom:0; padding-bottom:0; }
+    .pub .title{ font-weight:600; }
+    .pub .meta{ color:var(--muted); font-size:.95rem; }
+    footer{
+      margin-top: 46px;
+      padding-top: 14px;
+      border-top:1px solid var(--border);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* Language visibility */
+    .lang-zh { display:none; } /* default EN */
+    body.show-zh .lang-en { display:none; }
+    body.show-zh .lang-zh { display:block; }
+
+    /* Responsive */
+    @media (max-width: 620px){
+      .hero{ grid-template-columns: 1fr; }
+      .photo{ width: 120px; height: 120px; }
     }
   </style>
 </head>
 
 <body>
-  <h1>Bing Zan</h1>
-  <div class="subtitle">
-    PhD | Computational Biophysics | Membrane-Active Peptides
+  <div class="wrap">
+    <header>
+      <h1>Bing Zan</h1>
+      <p class="subtitle">
+        <span class="lang-en">Postdoctoral Researcher • King's College London</span>
+        <span class="lang-zh">博士后研究员 • 伦敦国王学院</span>
+      </p>
+
+      <nav aria-label="Primary">
+        <a href="#home">
+          <span class="lang-en">Home</span><span class="lang-zh">首页</span>
+        </a>
+
+        <div class="dd" data-dd>
+          <button type="button">
+            <span class="lang-en">CV ▾</span><span class="lang-zh">简历 ▾</span>
+          </button>
+          <div class="menu" role="menu">
+            <a href="files/CV_BingZan.pdf" role="menuitem" target="_blank">
+              <span class="lang-en">Download CV (PDF)</span><span class="lang-zh">下载简历（PDF）</span>
+            </a>
+            <a href="#cv" role="menuitem">
+              <span class="lang-en">CV Highlights</span><span class="lang-zh">简历要点</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="dd" data-dd>
+          <button type="button">
+            <span class="lang-en">Publications ▾</span><span class="lang-zh">出版物 ▾</span>
+          </button>
+          <div class="menu" role="menu">
+            <a href="#featured" role="menuitem">
+              <span class="lang-en">Featured</span><span class="lang-zh">精选</span>
+            </a>
+            <a href="#publications" role="menuitem">
+              <span class="lang-en">All Publications</span><span class="lang-zh">全部出版物</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="dd" data-dd>
+          <button type="button">
+            <span class="lang-en">Research ▾</span><span class="lang-zh">研究 ▾</span>
+          </button>
+          <div class="menu" role="menu">
+            <a href="#research" role="menuitem">
+              <span class="lang-en">Overview</span><span class="lang-zh">概述</span>
+            </a>
+            <a href="#projects" role="menuitem">
+              <span class="lang-en">Projects</span><span class="lang-zh">项目</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="#contact">
+          <span class="lang-en">Contact</span><span class="lang-zh">联系方式</span>
+        </a>
+
+        <div class="spacer"></div>
+
+        <div class="lang-toggle" aria-label="Language toggle">
+          <span class="muted">English</span>
+          <div class="pill" role="tablist" aria-label="Language">
+            <button id="btn-en" class="active" type="button">EN</button>
+            <button id="btn-zh" type="button">中文</button>
+          </div>
+          <span class="muted">中文</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HOME / WELCOME -->
+    <section id="home">
+      <h2>
+        <span class="lang-en">Welcome</span>
+        <span class="lang-zh">欢迎</span>
+      </h2>
+
+      <div class="hero">
+        <img class="photo" src="photo.jpg" alt="Portrait photo" />
+        <div>
+          <p class="lang-en">
+            Welcome to my academic personal page. I work on membrane-active peptides,
+            molecular dynamics simulations, and peptide-functionalised microfluidic platforms for biosensing.
+          </p>
+          <p class="lang-zh">
+            欢迎来到我的学术主页。我主要研究膜活性多肽、分子动力学模拟，以及多肽功能化微流控平台用于生物检测。
+          </p>
+
+          <p class="muted lang-en">
+            Feel free to explore my work and connect!
+          </p>
+          <p class="muted lang-zh">
+            欢迎浏览我的工作并与我联系！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PUBLICATIONS -->
+    <section id="featured">
+      <h2>
+        <span class="lang-en">Featured Publications</span>
+        <span class="lang-zh">精选出版物</span>
+      </h2>
+
+      <div class="card">
+        <!-- Replace with your real papers -->
+        <div class="pub">
+          <div>
+            <div class="title">Paper Title #1</div>
+            <div class="meta">Authors • Journal • Year</div>
+          </div>
+          <div><a href="#" target="_blank">[PDF]</a></div>
+        </div>
+
+        <div class="pub">
+          <div>
+            <div class="title">Paper Title #2</div>
+            <div class="meta">Authors • Journal • Year</div>
+          </div>
+          <div><a href="#" target="_blank">[PDF]</a></div>
+        </div>
+
+        <p class="muted lang-en" style="margin-top:12px;">
+          For a complete list, please visit the Publications section below.
+        </p>
+        <p class="muted lang-zh" style="margin-top:12px;">
+          如需完整列表，请查看下方“出版物”部分。
+        </p>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>
+        <span class="lang-en">Publications</span>
+        <span class="lang-zh">出版物</span>
+      </h2>
+
+      <p class="lang-en">
+        Full list on <a href="#" target="_blank">Google Scholar</a>.
+      </p>
+      <p class="lang-zh">
+        完整列表见 <a href="#" target="_blank">Google Scholar</a>。
+      </p>
+
+      <ul>
+        <li>2026 — Paper title… <a href="#" target="_blank">[PDF]</a></li>
+        <li>2025 — Paper title… <a href="#" target="_blank">[PDF]</a></li>
+        <li>2024 — Paper title… <a href="#" target="_blank">[PDF]</a></li>
+      </ul>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2>
+        <span class="lang-en">Research Interests</span>
+        <span class="lang-zh">研究兴趣</span>
+      </h2>
+
+      <ul class="lang-en">
+        <li>Membrane-active peptides (AMPs, CPPs, pH-responsive insertion)</li>
+        <li>All-atom MD simulations (e.g., GROMACS)</li>
+        <li>Peptide-functionalised microfluidics and biosensing</li>
+      </ul>
+
+      <ul class="lang-zh">
+        <li>膜活性多肽（抗菌肽、细胞穿膜肽、pH 响应插入）</li>
+        <li>全原子分子动力学模拟（如 GROMACS）</li>
+        <li>多肽功能化微流控与生物检测</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>
+        <span class="lang-en">Projects</span>
+        <span class="lang-zh">项目</span>
+      </h2>
+
+      <div class="card">
+        <p class="lang-en"><b>Project A:</b> One-liner describing what you’re doing and why it matters.</p>
+        <p class="lang-zh"><b>项目 A：</b> 用一句话介绍你在做什么，以及意义。</p>
+
+        <p class="lang-en"><b>Project B:</b> One-liner…</p>
+        <p class="lang-zh"><b>项目 B：</b> 一句话…</p>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <h2>
+        <span class="lang-en">CV Highlights</span>
+        <span class="lang-zh">简历要点</span>
+      </h2>
+
+      <ul class="lang-en">
+        <li>PhD in …</li>
+        <li>Postdoc at …</li>
+        <li>Selected awards / talks / service …</li>
+      </ul>
+
+      <ul class="lang-zh">
+        <li>博士：…</li>
+        <li>博士后：…</li>
+        <li>奖励 / 报告 / 学术服务：…</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>
+        <span class="lang-en">Contact</span>
+        <span class="lang-zh">联系方式</span>
+      </h2>
+
+      <p class="lang-en">
+        I’m always open to discussing research ideas or collaborations. Please reach out:
+      </p>
+      <p class="lang-zh">
+        我随时欢迎讨论研究想法或合作机会，欢迎联系：
+      </p>
+
+      <p>
+        <span class="lang-en">Email:</span><span class="lang-zh">邮箱：</span>
+        <a href="mailto:your.email@kcl.ac.uk">your.email@kcl.ac.uk</a>
+      </p>
+      <p>
+        <span class="lang-en">Office:</span><span class="lang-zh">办公室：</span>
+        <span class="muted">London, UK</span>
+      </p>
+      <p>
+        <span class="lang-en">Find me on:</span><span class="lang-zh">社交平台：</span>
+        <a href="#" target="_blank">Google Scholar</a> ·
+        <a href="#" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/bing-zan" target="_blank">GitHub</a>
+      </p>
+
+      <p class="muted lang-en">I aim to respond within 2–3 business days.</p>
+      <p class="muted lang-zh">我会在 2–3 个工作日内回复。</p>
+    </section>
+
+    <footer>
+      <span class="lang-en">© 2026 Bing Zan. All rights reserved.</span>
+      <span class="lang-zh">© 2026 Bing Zan。版权所有。</span>
+    </footer>
   </div>
 
-  <p>
-    I am a postdoctoral researcher working on membrane-active peptides,
-    molecular dynamics simulations, and peptide-based biosensing and diagnostics.
-  </p>
+  <script>
+    // Dropdowns
+    document.querySelectorAll("[data-dd]").forEach(dd => {
+      const btn = dd.querySelector("button");
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.querySelectorAll("[data-dd]").forEach(x => { if (x !== dd) x.classList.remove("open"); });
+        dd.classList.toggle("open");
+      });
+    });
+    document.addEventListener("click", () => {
+      document.querySelectorAll("[data-dd]").forEach(x => x.classList.remove("open"));
+    });
 
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Membrane-active peptides (AMPs, CPPs, pH-responsive peptides)</li>
-    <li>All-atom molecular dynamics simulations</li>
-    <li>Peptide-functionalised microfluidic devices</li>
-    <li>Translational peptide design</li>
-  </ul>
+    // Language toggle
+    const btnEn = document.getElementById("btn-en");
+    const btnZh = document.getElementById("btn-zh");
 
-  <h2>Publications</h2>
-  <p>
-    See my publications on
-    <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.
-  </p>
+    function setLang(lang){
+      document.body.classList.toggle("show-zh", lang === "zh");
+      btnEn.classList.toggle("active", lang === "en");
+      btnZh.classList.toggle("active", lang === "zh");
+      localStorage.setItem("lang", lang);
+    }
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://github.com/bing-zan">GitHub</a></li>
-    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-    <li><a href="mailto:your.email@domain.com">Email</a></li>
-  </ul>
+    btnEn.addEventListener("click", () => setLang("en"));
+    btnZh.addEventListener("click", () => setLang("zh"));
 
-  <footer style="margin-top: 4em; color: #888; font-size: 0.9em;">
-    © 2026 Bing Zan
-  </footer>
+    setLang(localStorage.getItem("lang") || "en");
+  </script>
 </body>
 </html>
