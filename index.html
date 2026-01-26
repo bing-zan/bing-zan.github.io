@@ -754,6 +754,41 @@
     btnZh.addEventListener("click", () => setLang("zh"));
 
     setLang(localStorage.getItem("lang") || "en");
+     const overlay = document.getElementById("modalOverlay");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImg = document.getElementById("modalImg");
+  const modalCaption = document.getElementById("modalCaption");
+  const modalLink = document.getElementById("modalLink");
+  const modalClose = document.getElementById("modalClose");
+
+  document.querySelectorAll(".fig-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      modalTitle.textContent = btn.dataset.title;
+      modalImg.src = btn.dataset.img;
+      modalImg.alt = btn.dataset.title || "Figure";
+      modalCaption.textContent = btn.dataset.caption || "";
+      modalLink.href = btn.dataset.link || "#";
+      modalLink.textContent = btn.dataset.linktext || "Publication link";
+
+      overlay.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  modalClose.addEventListener("click", () => {
+    overlay.style.display = "none";
+    document.body.style.overflow = "";
+  });
+
+  overlay.addEventListener("click", e => {
+    if (e.target === overlay) modalClose.click();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && overlay.style.display === "flex") {
+      modalClose.click();
+    }
+  });
   </script>
 </body>
 </html>
