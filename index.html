@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bing Zan</title>
-  <meta name="description" content="Academic personal page of Bing Zan" />
+  <title><<< FILL THIS: Your name, e.g., Bing Zan >>>></title>
+  <meta name="description" content="Academic personal page" />
 
   <style>
     :root{
@@ -150,22 +150,22 @@
       background:#fafafa;
     }
     .muted{ color: var(--muted); }
+
     .card{
       border:1px solid var(--border);
       border-radius: 16px;
       padding: 14px 16px;
       background:#fff;
     }
-    .pub{
-      display:flex;
-      justify-content:space-between;
-      gap: 12px;
+
+    .item{
       padding: 10px 0;
       border-bottom: 1px dashed var(--border);
     }
-    .pub:last-child{ border-bottom:0; padding-bottom:0; }
-    .pub .title{ font-weight:600; }
-    .pub .meta{ color:var(--muted); font-size:.95rem; }
+    .item:last-child{ border-bottom:0; padding-bottom:0; }
+    .item .title{ font-weight:600; }
+    .item .meta{ color:var(--muted); font-size:.95rem; margin-top:2px; }
+
     footer{
       margin-top: 46px;
       padding-top: 14px;
@@ -190,62 +190,29 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Bing Zan</h1>
+      <h1><<< FILL THIS: Your name, e.g., Bing Zan >>>></h1>
       <p class="subtitle">
-        <span class="lang-en">Postdoctoral Researcher • King's College London</span>
-        <span class="lang-zh">博士后研究员 • 伦敦国王学院</span>
+        <span class="lang-en"><<< FILL THIS: Role • Institution >>>></span>
+        <span class="lang-zh"><<< FILL THIS: 中文职位 • 单位 >>>></span>
       </p>
 
       <nav aria-label="Primary">
-        <a href="#home">
-          <span class="lang-en">Home</span><span class="lang-zh">首页</span>
-        </a>
+        <a href="#home"><span class="lang-en">Home</span><span class="lang-zh">首页</span></a>
 
         <div class="dd" data-dd>
-          <button type="button">
-            <span class="lang-en">CV ▾</span><span class="lang-zh">简历 ▾</span>
-          </button>
+          <button type="button"><span class="lang-en">CV ▾</span><span class="lang-zh">简历 ▾</span></button>
           <div class="menu" role="menu">
-            <a href="files/CV_BingZan.pdf" role="menuitem" target="_blank">
+            <a href="<<< FILL THIS: CV PDF path, e.g., files/CV_BingZan.pdf >>>" role="menuitem" target="_blank">
               <span class="lang-en">Download CV (PDF)</span><span class="lang-zh">下载简历（PDF）</span>
             </a>
-            <a href="#cv" role="menuitem">
-              <span class="lang-en">CV Highlights</span><span class="lang-zh">简历要点</span>
-            </a>
+            <a href="#cv" role="menuitem"><span class="lang-en">CV Highlights</span><span class="lang-zh">简历要点</span></a>
           </div>
         </div>
 
-        <div class="dd" data-dd>
-          <button type="button">
-            <span class="lang-en">Publications ▾</span><span class="lang-zh">出版物 ▾</span>
-          </button>
-          <div class="menu" role="menu">
-            <a href="#featured" role="menuitem">
-              <span class="lang-en">Featured</span><span class="lang-zh">精选</span>
-            </a>
-            <a href="#publications" role="menuitem">
-              <span class="lang-en">All Publications</span><span class="lang-zh">全部出版物</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="dd" data-dd>
-          <button type="button">
-            <span class="lang-en">Research ▾</span><span class="lang-zh">研究 ▾</span>
-          </button>
-          <div class="menu" role="menu">
-            <a href="#research" role="menuitem">
-              <span class="lang-en">Overview</span><span class="lang-zh">概述</span>
-            </a>
-            <a href="#projects" role="menuitem">
-              <span class="lang-en">Projects</span><span class="lang-zh">项目</span>
-            </a>
-          </div>
-        </div>
-
-        <a href="#contact">
-          <span class="lang-en">Contact</span><span class="lang-zh">联系方式</span>
-        </a>
+        <a href="#publications"><span class="lang-en">Publications</span><span class="lang-zh">出版物</span></a>
+        <a href="#conferences"><span class="lang-en">Conferences</span><span class="lang-zh">会议报告</span></a>
+        <a href="#research"><span class="lang-en">Research</span><span class="lang-zh">研究</span></a>
+        <a href="#contact"><span class="lang-en">Contact</span><span class="lang-zh">联系方式</span></a>
 
         <div class="spacer"></div>
 
@@ -260,179 +227,173 @@
       </nav>
     </header>
 
-    <!-- HOME / WELCOME -->
+    <!-- HOME / ABOUT -->
     <section id="home">
-      <h2>
-        <span class="lang-en">Welcome</span>
-        <span class="lang-zh">欢迎</span>
-      </h2>
+      <h2><span class="lang-en">Welcome</span><span class="lang-zh">欢迎</span></h2>
 
       <div class="hero">
-        <img class="photo" src="photo.jpg" alt="Portrait photo" />
+        <img class="photo" src="<<< FILL THIS: photo filename, e.g., photo.jpg >>>" alt="Portrait photo" />
         <div>
-          <p class="lang-en">
-            Welcome to my academic personal page. I work on membrane-active peptides, and peptide-functionalised microfluidic platforms for biosensing.
-          </p>
-          <p class="lang-zh">
-            欢迎来到我的学术主页。我主要研究膜活性多肽、分子动力学模拟，以及多肽功能化微流控平台用于生物检测。
-          </p>
+          <p class="lang-en"><<< FILL THIS: 2–4 sentence English bio >>>></p>
+          <p class="lang-zh"><<< FILL THIS: 2–4 sentence 中文简介 >>>></p>
 
-          <p class="muted lang-en">
-            Feel free to explore my work and connect!
-          </p>
-          <p class="muted lang-zh">
-            欢迎浏览我的工作并与我联系！
-          </p>
+          <p class="muted lang-en"><<< FILL THIS (optional): One short English line (e.g., open to collaborations) >>>></p>
+          <p class="muted lang-zh"><<< FILL THIS (optional): 一句话中文补充 >>>></p>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PUBLICATIONS -->
-    <section id="featured">
-      <h2>
-        <span class="lang-en">Featured Publications</span>
-        <span class="lang-zh">精选出版物</span>
-      </h2>
-
-      <div class="card">
-        <!-- Replace with your real papers -->
-        <div class="pub">
-          <div>
-            <div class="title">Paper Title #1</div>
-            <div class="meta">Authors • Journal • Year</div>
-          </div>
-          <div><a href="#" target="_blank">[PDF]</a></div>
-        </div>
-
-        <div class="pub">
-          <div>
-            <div class="title">Paper Title #2</div>
-            <div class="meta">Authors • Journal • Year</div>
-          </div>
-          <div><a href="#" target="_blank">[PDF]</a></div>
-        </div>
-
-        <p class="muted lang-en" style="margin-top:12px;">
-          For a complete list, please visit the Publications section below.
-        </p>
-        <p class="muted lang-zh" style="margin-top:12px;">
-          如需完整列表，请查看下方“出版物”部分。
-        </p>
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
+    <!-- PUBLICATIONS (FULL LIST ONLY) -->
     <section id="publications">
-      <h2>
-        <span class="lang-en">Publications</span>
-        <span class="lang-zh">出版物</span>
-      </h2>
+      <h2><span class="lang-en">Publications</span><span class="lang-zh">出版物</span></h2>
 
       <p class="lang-en">
-        Full list on <a href="#" target="_blank">Google Scholar</a>.
+        Full list also available on
+        <a href="<<< FILL THIS: Google Scholar link >>>" target="_blank">Google Scholar</a>.
       </p>
       <p class="lang-zh">
-        完整列表见 <a href="#" target="_blank">Google Scholar</a>。
+        完整列表也可见
+        <a href="<<< FILL THIS: Google Scholar link >>>" target="_blank">Google Scholar</a>。
       </p>
 
-      <ul>
-        <li>2026 — Paper title… <a href="#" target="_blank">[PDF]</a></li>
-        <li>2025 — Paper title… <a href="#" target="_blank">[PDF]</a></li>
-        <li>2024 — Paper title… <a href="#" target="_blank">[PDF]</a></li>
-      </ul>
+      <div class="card">
+        <!-- Copy this block for each paper -->
+        <div class="item">
+          <div class="title"><<< FILL THIS: Paper title >>>></div>
+          <div class="meta"><<< FILL THIS: Authors • Journal • Year >>>></div>
+          <div class="meta">
+            <a href="<<< FILL THIS: PDF or DOI link >>>" target="_blank">[Link]</a>
+            <!-- Optional: add code/data link -->
+            <!-- · <a href="<<< FILL THIS: GitHub/Zenodo link >>>" target="_blank">[Code/Data]</a> -->
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="title"><<< FILL THIS: Paper title >>>></div>
+          <div class="meta"><<< FILL THIS: Authors • Journal • Year >>>></div>
+          <div class="meta"><a href="<<< FILL THIS: PDF or DOI link >>>" target="_blank">[Link]</a></div>
+        </div>
+
+        <!-- Add more items... -->
+      </div>
+
+      <p class="muted lang-en" style="margin-top:12px;">
+        <<< FILL THIS (optional): Note about equal contribution, corresponding author, etc. >>>
+      </p>
+      <p class="muted lang-zh" style="margin-top:12px;">
+        <<< FILL THIS (optional): 中文备注（共同一作/通讯等） >>>
+      </p>
     </section>
+
+    <!-- CONFERENCES -->
+    <section id="conferences">
+  <h2><span class="lang-en">Conferences & Presentations</span><span class="lang-zh">会议与报告</span></h2>
+
+  <p class="lang-en">Oral and poster presentations (newest first).</p>
+  <p class="lang-zh">口头报告与海报展示（按时间从新到旧）。</p>
+
+  <div class="card">
+    <div class="item">
+      <div class="title">Unraveling the transient pore formation mechanism of magainin peptides.</div>
+      <div class="meta">Pacifichem — Honolulu, Hawaii, USA — 2025 — <b>Oral</b>.</div>
+      <div class="meta">
+        <!-- Optional: <a href="<<< FILL THIS: slides/poster link >>>" target="_blank">[Slides]</a> -->
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">pH-driven peptide insertion captured in silico and in lab.</div>
+      <div class="meta">69th Annual Meeting of the Biophysical Society — Los Angeles, California, USA — 2025 — <b>Poster</b>.</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Ab-initio prediction of antimicrobial-peptide channels in membranes.</div>
+      <div class="meta">CECAM Workshop “Peptides in biology and materials: bridging simulation and experimental data” — Florence, Italy — 2024 — <b>Oral</b>.</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Structural Ensemble of Peptide-induced Membrane Poration by Heterogeneous Magainin Peptides.</div>
+      <div class="meta">37th European Peptide Symposium & 14th International Peptide Symposium — Florence, Italy — 2024 — <b>Poster</b>.</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Ab-initio prediction of antimicrobial-peptide channels in membranes.</div>
+      <div class="meta">68th Annual Meeting of the Biophysical Society — Philadelphia, Pennsylvania, USA — 2024 — <b>Oral & Poster</b>.</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Structural Ensemble of Peptide-induced Membrane Poration by Heterogeneous Magainin Peptides.</div>
+      <div class="meta">EMBO Workshop: Computational structural biology — Heidelberg, Germany — 2023 — <b>Poster</b>.</div>
+    </div>
+  </div>
+</section>
 
     <!-- RESEARCH -->
     <section id="research">
-      <h2>
-        <span class="lang-en">Research Interests</span>
-        <span class="lang-zh">研究兴趣</span>
-      </h2>
+      <h2><span class="lang-en">Research Interests</span><span class="lang-zh">研究兴趣</span></h2>
 
       <ul class="lang-en">
-        <li>Membrane-active peptides (AMPs, CPPs, pH-responsive insertion)</li>
-        <li>All-atom MD simulations (e.g., GROMACS)</li>
-        <li>Peptide-functionalised microfluidics and biosensing</li>
+        <li><<< FILL THIS: Interest 1 >>>></li>
+        <li><<< FILL THIS: Interest 2 >>>></li>
+        <li><<< FILL THIS: Interest 3 >>>></li>
       </ul>
 
       <ul class="lang-zh">
-        <li>膜活性多肽（抗菌肽、细胞穿膜肽、pH 响应插入）</li>
-        <li>全原子分子动力学模拟（如 GROMACS）</li>
-        <li>多肽功能化微流控与生物检测</li>
+        <li><<< FILL THIS: 中文方向 1 >>>></li>
+        <li><<< FILL THIS: 中文方向 2 >>>></li>
+        <li><<< FILL THIS: 中文方向 3 >>>></li>
       </ul>
-    </section>
 
-    <section id="projects">
-      <h2>
-        <span class="lang-en">Projects</span>
-        <span class="lang-zh">项目</span>
-      </h2>
-
+      <h2><span class="lang-en">Projects</span><span class="lang-zh">项目</span></h2>
       <div class="card">
-        <p class="lang-en"><b>Project A:</b> One-liner describing what you’re doing and why it matters.</p>
-        <p class="lang-zh"><b>项目 A：</b> 用一句话介绍你在做什么，以及意义。</p>
+        <p class="lang-en"><b><<< FILL THIS: Project name >>>>:</b> <<< FILL THIS: 1–2 lines description >>>></p>
+        <p class="lang-zh"><b><<< FILL THIS: 项目名 >>>>：</b> <<< FILL THIS: 中文 1–2 句介绍 >>>></p>
 
-        <p class="lang-en"><b>Project B:</b> One-liner…</p>
-        <p class="lang-zh"><b>项目 B：</b> 一句话…</p>
+        <p class="lang-en"><b><<< FILL THIS: Project name >>>>:</b> <<< FILL THIS: 1–2 lines description >>>></p>
+        <p class="lang-zh"><b><<< FILL THIS: 项目名 >>>>：</b> <<< FILL THIS: 中文 1–2 句介绍 >>>></p>
       </div>
     </section>
 
-    <!-- CV -->
+    <!-- CV HIGHLIGHTS -->
     <section id="cv">
-      <h2>
-        <span class="lang-en">CV Highlights</span>
-        <span class="lang-zh">简历要点</span>
-      </h2>
+      <h2><span class="lang-en">CV Highlights</span><span class="lang-zh">简历要点</span></h2>
 
       <ul class="lang-en">
-        <li>PhD in …</li>
-        <li>Postdoc at …</li>
-        <li>Selected awards / talks / service …</li>
+        <li><<< FILL THIS: Degree / role / institution >>>></li>
+        <li><<< FILL THIS: Award / fellowship / grant >>>></li>
+        <li><<< FILL THIS: Service / teaching / outreach >>>></li>
       </ul>
 
       <ul class="lang-zh">
-        <li>博士：…</li>
-        <li>博士后：…</li>
-        <li>奖励 / 报告 / 学术服务：…</li>
+        <li><<< FILL THIS: 学位 / 职位 / 单位 >>>></li>
+        <li><<< FILL THIS: 奖项 / 资助 >>>></li>
+        <li><<< FILL THIS: 学术服务 / 教学 / 科普 >>>></li>
       </ul>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-      <h2>
-        <span class="lang-en">Contact</span>
-        <span class="lang-zh">联系方式</span>
-      </h2>
+      <h2><span class="lang-en">Contact</span><span class="lang-zh">联系方式</span></h2>
 
-      <p class="lang-en">
-        I’m always open to discussing research ideas or collaborations. Please reach out:
-      </p>
-      <p class="lang-zh">
-        我随时欢迎讨论研究想法或合作机会，欢迎联系：
-      </p>
+      <p class="lang-en"><<< FILL THIS (optional): invitation for collaborations >>>></p>
+      <p class="lang-zh"><<< FILL THIS (optional): 合作/联系邀请 >>>></p>
 
       <p>
         <span class="lang-en">Email:</span><span class="lang-zh">邮箱：</span>
-        <a href="mailto:your.email@kcl.ac.uk">your.email@kcl.ac.uk</a>
-      </p>
-      <p>
-        <span class="lang-en">Office:</span><span class="lang-zh">办公室：</span>
-        <span class="muted">London, UK</span>
-      </p>
-      <p>
-        <span class="lang-en">Find me on:</span><span class="lang-zh">社交平台：</span>
-        <a href="#" target="_blank">Google Scholar</a> ·
-        <a href="#" target="_blank">LinkedIn</a> ·
-        <a href="https://github.com/bing-zan" target="_blank">GitHub</a>
+        <a href="mailto:<<< FILL THIS: your email >>>"><<< FILL THIS: your email >>>></a>
       </p>
 
-      <p class="muted lang-en">I aim to respond within 2–3 business days.</p>
-      <p class="muted lang-zh">我会在 2–3 个工作日内回复。</p>
+      <p>
+        <span class="lang-en">Find me on:</span><span class="lang-zh">链接：</span>
+        <a href="<<< FILL THIS: Google Scholar link >>>" target="_blank">Google Scholar</a> ·
+        <a href="<<< FILL THIS: LinkedIn link >>>" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/bing-zan" target="_blank">GitHub</a>
+      </p>
     </section>
 
     <footer>
-      <span class="lang-en">© 2026 Bing Zan. All rights reserved.</span>
-      <span class="lang-zh">© 2026 Bing Zan。版权所有。</span>
+      <span class="lang-en">© <<< FILL THIS: year >>> <<< FILL THIS: your name >>>. All rights reserved.</span>
+      <span class="lang-zh">© <<< FILL THIS: year >>> <<< FILL THIS: your name >>>。版权所有。</span>
     </footer>
   </div>
 
