@@ -208,11 +208,12 @@
 }
 .fig-thumb{
   width: 100%;
-  height: auto;
-  object-fit: initial;
+  height: 240px;        /* key: taller than before */
+  object-fit: contain; /* NEVER crop scientific figures */
+  background: #fff;    /* clean background for schematics */
   display: block;
-  background: #fafafa;
 }
+
 .fig-meta{
   padding: 10px 12px 12px;
 }
