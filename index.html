@@ -338,8 +338,8 @@
     <header>
       <h1>Bing Zan</h1>
       <p class="subtitle">
-        <span class="lang-en"> Postdoctoral Researcher • King's College London </span>
-        <span class="lang-zh"> 博士后研究员 • 伦敦国王学院 </span>
+        <span class="lang-en"> Postdoctoral Fellow • School of Medicine, Emory University </span>
+        <span class="lang-zh"> 博士后研究员 • 埃默里大学医学院 </span>
       </p>
 
       <nav aria-label="Primary">
@@ -349,9 +349,11 @@
         <div class="dd" data-dd>
           <button type="button"><span class="lang-en">CV ▾</span><span class="lang-zh">简历 ▾</span></button>
           <div class="menu" role="menu">
+            <!-- Download link hidden until a general-purpose CV is ready
             <a href="files/CV_BingZan.pdf" role="menuitem" target="_blank">
               <span class="lang-en">Download CV (PDF)</span><span class="lang-zh">下载简历（PDF）</span>
             </a>
+            -->
             <a href="#cv" role="menuitem"><span class="lang-en">CV Outlines</span><span class="lang-zh">简历要点</span></a>
           </div>
         </div>
@@ -397,19 +399,19 @@
 
   <div class="bio">
     <p class="lang-en">
-      <b>Bing Zan</b> is a postdoctoral researcher in the Department of Chemistry at King’s College London.
-      She received her Ph.D. in Physics from Shanghai Jiao Tong University in 2025 and was a visiting Ph.D. student
-      at King’s College London from 2023 to 2025.
-      Her research focuses on membrane-active peptides: from in silico mechanistic study,
-      simulation-guided therapeutic peptide design and in vitro screening,
-      to integrating peptides into microfluidic platforms for cancer cell detection.
-      She aims to bridge fundamental biophysical mechanisms with practical peptide-based
-      technologies for therapeutics and diagnostics.
+      <b>Bing Zan</b> is a computational scientist and postdoctoral fellow in the School of Medicine at Emory University,
+      where she develops AI-assisted microscopy analysis and machine-learning tools for single-virus tracking.
+      She received her Ph.D. in Physics from Shanghai Jiao Tong University in 2025, was a visiting Ph.D. student
+      at King’s College London from 2023 to 2025, and then worked at King’s as a research assistant and postdoctoral research associate.
+      Her research combines microsecond all-atom molecular dynamics, free-energy calculations and structure-based design
+      with experimental validation to develop membrane-active peptides: from mechanistic studies of membrane poration
+      and simulation-guided design of anticancer peptides, to a peptide-functionalised device for pan-cancer cell detection
+      (UK patent application filed).
     </p>
 
     <p class="lang-zh">
-      <b>昝冰</b>现为伦敦国王学院化学系博士后研究员，主要研究膜活性多肽。
-      她于上海交通大学获得物理学博士学位，并在伦敦国王学院进行联合培养。她结合全原子分子动力学模拟与实验手段，系统研究多肽–脂质相互作用及多肽诱导的膜致孔机制。
+      <b>昝冰</b>现为埃默里大学医学院博士后研究员，开发基于人工智能的显微成像分析与机器学习方法，用于单病毒追踪。
+      她于上海交通大学获得物理学博士学位，并在伦敦国王学院进行联合培养，此后在伦敦国王学院化学系担任研究助理及博士后研究员。她结合全原子分子动力学模拟与实验手段，系统研究多肽–脂质相互作用及多肽诱导的膜致孔机制。
       其研究涵盖抗菌肽作用机理、多肽的模拟指导理性设计，以及多肽功能化微流控平台在无抗体癌细胞检测中的应用，并致力于连接基础生物物理机制与多肽治疗和诊断技术的应用。
     </p>
   </div>
@@ -483,7 +485,7 @@
         data-img="electroporation.jpg"
         data-caption="Dynamic exchange of antimicrobial peptides stabilises persistent lipid pores."
         data-link="https://www.biorxiv.org/content/10.1101/2025.09.18.677094v1"
-        data-linktext="bioRxiv (revision at PNAS)">
+        data-linktext="bioRxiv (revision at Nature Communications)">
         <img class="fig-thumb" src="electroporation.jpg"
              alt="Pore-forming modes of action of AMPs" />
         <div class="fig-meta">
@@ -505,10 +507,15 @@
     Simulation-guided rational design of therapeutic peptides.
     This includes pH-responsive peptides with reversible membrane partitioning for targeting acidic tumour
     microenvironments, as well as lipid-selective peptides that preferentially bind cancer cell membranes.
+    Highlights include about 100 lipid-selective and 15 pH-sensitive peptides designed in silico and selected for synthesis;
+    an 8-peptide library on a pHLIP scaffold showing that graded leucine-to-alanine substitution tunes the insertion pH;
+    and 100 peptide–fluorophore conjugates (BODIPY and NBD-Se) designed as cancer-membrane-targeting probes, now in in vitro screening.
   </p>
   <p class="lang-zh">
     在机制研究基础上，进一步发展基于模拟的多肽理性设计策略，
     包括用于靶向肿瘤酸性微环境的 pH 响应型多肽，以及选择性识别癌细胞膜脂组成的脂质选择性多肽。
+    已在计算中设计约 100 条脂质选择性多肽和 15 条 pH 敏感多肽并进入合成；基于 pHLIP 骨架构建 8 条多肽库，
+    证明逐步的亮氨酸→丙氨酸替换可调控插膜 pH；并设计了 100 个多肽–荧光团偶联物（BODIPY 与 NBD-Se），目前正在体外筛选。
   </p>
 <hr class="research-divider" />
   <!-- ========================= -->
@@ -522,13 +529,31 @@
     Peptide-functionalised microfluidic sensing platform for 
     broad-spectrum cancer cell detection. The platform integrates optical and electrochemical readouts
     and enables detection from mixed cell populations, offering a scalable route toward non-invasive
-    multi-cancer screening. A patent application has been filed in 2025.
+    multi-cancer screening. The prototype has been tested across five cancer types
+    (breast, lung, colon, cervical and head-and-neck), and a UK patent application has been filed.
   </p>
   <p class="lang-zh">
     我目前开发一种基于多肽功能化的微流控检测平台，
     该体系可实现多种癌细胞的广谱检测，
     并结合光学与电化学读出方式，为无创多癌筛查提供可扩展的解决方案。
-    相关技术已提交专利申请。
+    原型器件已在乳腺癌、肺癌、结肠癌、宫颈癌和头颈癌五类癌细胞中完成测试，相关技术已提交英国专利申请。
+  </p>
+<hr class="research-divider" />
+  <!-- ========================= -->
+  <!-- THEME 4 -->
+  <!-- ========================= -->
+<h3 class="research-theme" style="margin-top:28px;">
+  AI-assisted microscopy analysis of HIV-1 maturation
+</h3>
+
+  <p class="lang-en">
+    At Emory University, I am developing an AI-assisted microscopy analysis pipeline and a machine-learning model
+    to predict HIV-1 maturation events from single-virus tracking data. The pipeline automates tracking,
+    cutting analysis time from about 2 hours to 5 minutes, with accuracy validated against manual tracking.
+  </p>
+  <p class="lang-zh">
+    在埃默里大学，我开发了基于人工智能的显微成像分析流程和机器学习模型，用于从单病毒追踪数据中预测 HIV-1 成熟事件。
+    该流程实现了追踪自动化，将分析时间从约 2 小时缩短至 5 分钟，其准确性已通过人工追踪验证。
   </p>
 </section>
     
@@ -557,7 +582,17 @@
 <div class="card">
 
   <div class="item">
-    <div class="title">2026–Present  Postdoctoral Researcher</div>
+    <div class="title">2026.05–Present  Postdoctoral Fellow</div>
+    <div class="meta">
+      School of Medicine, Emory University, Atlanta, GA, USA
+    </div>
+    <div class="meta">
+      Project: AI-assisted microscopy analysis and machine-learning prediction of HIV-1 maturation events
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="title">2026.01–2026.04  Postdoctoral Research Associate</div>
     <div class="meta">
       Department of Chemistry, King’s College London, United Kingdom
     </div>
@@ -569,7 +604,7 @@
   </div>
 
   <div class="item">
-    <div class="title">2023–2025  Research Assistant</div>
+    <div class="title">2024.04–2026.01  Research Assistant</div>
     <div class="meta">
       Department of Chemistry, King’s College London, United Kingdom
     </div>
@@ -580,6 +615,29 @@
     </div>
   </div>
 
+</div>
+
+<!-- SKILLS -->
+<h3 class="lang-en" style="margin-top:28px;">Skills</h3>
+<h3 class="lang-zh" style="margin-top:28px;">技能</h3>
+
+<div class="card">
+  <div class="item">
+    <div class="title"><span class="lang-en">Molecular modelling</span><span class="lang-zh">分子模拟</span></div>
+    <div class="meta">Microsecond all-atom MD (GROMACS, CHARMM36), membrane-partitioning free-energy calculations, small-molecule docking and virtual screening, AlphaFold, VMD, PyMOL, MDAnalysis</div>
+  </div>
+  <div class="item">
+    <div class="title"><span class="lang-en">Experimental biophysics</span><span class="lang-zh">实验生物物理</span></div>
+    <div class="meta">CD, SRCD, AFM, PM-IRRAS, fluorescence and electrochemical methods</div>
+  </div>
+  <div class="item">
+    <div class="title"><span class="lang-en">AI and computing</span><span class="lang-zh">人工智能与计算</span></div>
+    <div class="meta">Machine learning for imaging data, AI-assisted peptide design (OpenProtein.AI), HPC and Linux</div>
+  </div>
+  <div class="item">
+    <div class="title"><span class="lang-en">Languages</span><span class="lang-zh">语言</span></div>
+    <div class="meta"><span class="lang-en">English (fluent), Chinese (native)</span><span class="lang-zh">英语（流利），中文（母语）</span></div>
+  </div>
 </div>
 
 </section>
@@ -633,8 +691,19 @@
 
   <p class="lang-en"><b>Note:</b> † joint-first author, * corresponding author.</p>
   <p class="lang-zh"><b>注：</b> † 共同一作，* 通讯作者。</p>
+  <p><span class="lang-en">Full list on</span><span class="lang-zh">完整列表见</span>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=bing+zan" target="_blank">PubMed</a> ·
+    <a href="https://scholar.google.com/citations?user=sXiXBZEAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a></p>
 
   <div class="card">
+    <div class="item">
+      <div class="title">Computational Platforms for Membrane Active Peptide Therapeutic Design.</div>
+      <div class="meta">Zan, B.,* Chen, C. H., Sabha, M., Wu, K., Kadri, M., Nwajiaku, O., Hoogland, D., Ulmschneider, J. P., Ulmschneider, M. B.* — <i>Chemical Reviews</i>, 2026, 126(19): 10662–10702.</div>
+      <div class="meta">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/42916407/" target="_blank">[Link]</a>
+      </div>
+    </div>
+
     <div class="item">
       <div class="title">PGLa and Magainin 2 Can Porate Membranes via Transient Hourglass-shaped Toroidal Pores.</div>
       <div class="meta">Zan, B.,* Chen, C. H.*, Mateen, A. I., Kolenovic, B., Wiedman, G. R.,* Ulmschneider, M. B.,* Ulmschneider, J. P.* — <i>Journal of the American Chemical Society</i>, 2026.</div>
@@ -645,7 +714,7 @@
 
     <div class="item">
       <div class="title">Dynamic exchange of antimicrobial peptides stabilize persistent lipid pores.</div>
-      <div class="meta">Sengel, J., Zan, B., Szabo, M., Dixon, D., Ulmschneider, J. P., Wallace, M.* — <i>bioRxiv</i>, 2025: 2025.09.18.677094. (revision at PNAS)</div>
+      <div class="meta">Sengel, J., Zan, B., Szabo, M., Dixon, D., Ulmschneider, J. P., Wallace, M.* — <i>bioRxiv</i>, 2025: 2025.09.18.677094. (revision at <i>Nature Communications</i>)</div>
       <div class="meta">
         <a href="https://www.biorxiv.org/content/10.1101/2025.09.18.677094v1" target="_blank">[Link]</a>
       </div>
@@ -758,26 +827,27 @@
 
   <p>
     <span class="lang-en">Email:</span><span class="lang-zh">邮箱：</span>
-    <a href="mailto:bing.1.zan@kcl.ac.uk">bing.1.zan@kcl.ac.uk</a>
+    <a href="mailto:bingzan9@gmail.com">bingzan9@gmail.com</a>
   </p>
 
   <p>
     <span class="lang-en">Connect with me on:</span>
     <span class="lang-zh">学术与社交平台：</span>
     <a href="https://scholar.google.com/citations?user=sXiXBZEAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> ·
-    <a href="https://www.linkedin.com/in/bing-zan-39b2842b9/" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/bing-zan/" target="_blank">LinkedIn</a> ·
+    <a href="https://github.com/bing-zan" target="_blank">GitHub</a>
   </p>
   <p>
-    <span class="lang-en">Office:</span><span class="lang-zh">办公地址：</span>
-    Department of Chemistry, Britannia House, King’s College London,<br />
-    London, SE1 1DB, United Kingdom
+    <span class="lang-en">Location:</span><span class="lang-zh">所在地：</span>
+    <span class="lang-en">School of Medicine, Emory University, Atlanta, GA, USA</span>
+    <span class="lang-zh">美国佐治亚州亚特兰大，埃默里大学医学院</span>
   </p>
 
 </section>
       
 <footer>
-  <span class="muted lang-en">Last updated: Jan. 2026</span>
-  <span class="muted lang-zh">最后更新：2026 年 1 月</span>
+  <span class="muted lang-en">Last updated: Nov. 2026</span>
+  <span class="muted lang-zh">最后更新：2026 年 11 月</span>
 </footer>
 
   <script>
